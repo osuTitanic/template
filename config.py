@@ -16,6 +16,9 @@ S3_ACCESS_KEY = os.environ.get('S3_ACCESS_KEY')
 S3_SECRET_KEY = os.environ.get('S3_SECRET_KEY')
 S3_BASEURL    = os.environ.get('S3_BASEURL')
 
+SENDGRID_API_KEY = os.environ.get('SENDGRID_API_KEY')
+SENDGRID_EMAIL = os.environ.get('SENDGRID_EMAIL')
+
 REDIS_HOST = os.environ.get('REDIS_HOST')
 REDIS_PORT = int(os.environ.get('REDIS_PORT', 6379))
 
