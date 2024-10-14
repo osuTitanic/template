@@ -26,8 +26,6 @@ FREE_SUPPORTER = eval(os.environ.get('FREE_SUPPORTER', 'True').capitalize())
 S3_ENABLED = eval(os.environ.get('ENABLE_S3', 'True').capitalize())
 DEBUG = eval(os.environ.get('DEBUG', 'False').capitalize())
 
-DATA_PATH = os.path.abspath('.data')
-
 SENDGRID_API_KEY = os.environ.get('SENDGRID_API_KEY')
 SENDGRID_EMAIL = os.environ.get('SENDGRID_EMAIL')
 
@@ -36,4 +34,8 @@ MAILGUN_EMAIL = os.environ.get('MAILGUN_EMAIL', '')
 MAILGUN_URL = os.environ.get('MAILGUN_URL', 'api.eu.mailgun.net')
 MAILGUN_DOMAIN = MAILGUN_EMAIL.split('@')[-1]
 
+EMAILS_ENABLED = bool(MAILGUN_API_KEY or SENDGRID_API_KEY)
+EMAIL = MAILGUN_EMAIL or SENDGRID_EMAIL
+
 OFFICER_WEBHOOK_URL = os.environ.get('OFFICER_WEBHOOK_URL')
+DATA_PATH = os.path.abspath('.data')
