@@ -31,5 +31,5 @@ logger = logging.getLogger('titanic')
 storage = Storage()
 requests = Session()
 requests.headers = {
-    'User-Agent': 'osuTitanic/titanic'
+    'User-Agent': f'osuTitanic ({config.DOMAIN_NAME})'
 }
