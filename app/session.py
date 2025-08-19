@@ -27,7 +27,6 @@ events = EventQueue(
 )
 
 logger = logging.getLogger('titanic')
-
 storage = Storage()
 requests = Session()
 requests.headers = {

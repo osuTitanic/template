@@ -13,17 +13,16 @@ POSTGRES_POOLSIZE_OVERFLOW = int(os.environ.get('POSTGRES_POOLSIZE_OVERFLOW', 30
 
 S3_ACCESS_KEY = os.environ.get('S3_ACCESS_KEY')
 S3_SECRET_KEY = os.environ.get('S3_SECRET_KEY')
-S3_BASEURL    = os.environ.get('S3_BASEURL')
+S3_BASEURL = os.environ.get('S3_BASEURL')
 
 REDIS_HOST = os.environ.get('REDIS_HOST')
 REDIS_PORT = int(os.environ.get('REDIS_PORT', 6379))
 
 APPROVED_MAP_REWARDS = eval(os.environ.get('APPROVED_MAP_REWARDS', 'False').capitalize())
-FREE_SUPPORTER = eval(os.environ.get('FREE_SUPPORTER', 'True').capitalize())
+ALLOW_RELAX = eval(os.environ.get('ALLOW_RELAX', 'False').capitalize())
 ENABLE_SSL = eval(os.environ.get('ENABLE_SSL', 'False').capitalize())
 S3_ENABLED = eval(os.environ.get('ENABLE_S3', 'True').capitalize())
 DEBUG = eval(os.environ.get('DEBUG', 'False').capitalize())
-DOMAIN_NAME = os.environ.get('DOMAIN_NAME')
 
 EMAIL_PROVIDER = os.environ.get('EMAIL_PROVIDER')
 EMAIL_SENDER = os.environ.get('EMAIL_SENDER')
@@ -41,6 +40,13 @@ MAILGUN_URL = os.environ.get('MAILGUN_URL', 'api.eu.mailgun.net')
 
 OFFICER_WEBHOOK_URL = os.environ.get('OFFICER_WEBHOOK_URL')
 EVENT_WEBHOOK_URL = os.environ.get('EVENT_WEBHOOK_URL')
+
+OSU_CLIENT_ID = os.environ.get('OSU_CLIENT_ID')
+OSU_CLIENT_SECRET = os.environ.get('OSU_CLIENT_SECRET')
+
+FRONTEND_SECRET_KEY = os.environ.get('FRONTEND_SECRET_KEY')
+IMAGE_PROXY_BASEURL = os.environ.get('IMAGE_PROXY_BASEURL')
+DOMAIN_NAME = os.environ.get('DOMAIN_NAME')
 DATA_PATH = os.path.abspath('.data')
 
 OSU_BASEURL = f'http{"s" if ENABLE_SSL else ""}://osu.{DOMAIN_NAME}'
