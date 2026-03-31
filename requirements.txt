@@ -1,6 +1,6 @@
 sqlalchemy==2.0.48
 python-dotenv==1.2.2
-requests==2.33.0
+requests==2.33.1
 redis==7.4.0
 geoip2==5.2.0
 titanic-pp-py==0.0.7
